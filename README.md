@@ -121,7 +121,8 @@ Documentation:
 Update the monorepo's main README or backend-specific README to include instructions on how to use the new API endpoint.
 Provide example API requests and responses.
 
-![Scrabble Score API](./server/tests/Screenshot%202024-08-31%20at%2023.29.38.png)
+![Scrabble Score API](./server/tests/successful_test_run.png)
+![Scrabble Score API](./server/tests/successful_postman_call.png)
 
 Commit Regularly:
 As you work through this task, please commit regularly to the repository. These commits will help us understand your approach, thought process, and how you manage your time. Even if you don't fully complete the task, we'll be able to see your progress and how you tackled the problem.
