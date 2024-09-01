@@ -59,6 +59,22 @@ const App = () => {
         <button type="submit">Submit</button>
       </form>
       {error && <p className="error">{error}</p>}
+      <table>
+        <thead>
+          <tr>
+            <th>Word</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {wordScores.map((entry, index) => (
+            <tr key={index}>
+              <td>{entry.word}</td>
+              <td>{entry.score}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
