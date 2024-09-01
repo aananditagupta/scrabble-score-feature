@@ -11,6 +11,7 @@
 
 ##### New Features
 
+- added basic form for user input (f9620a95)
 - added scrabble score API (898a647b)
 
 ##### Refactors
