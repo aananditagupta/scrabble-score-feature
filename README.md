@@ -4,35 +4,39 @@ Clone the project, change into the directory and install the dependencies.
 
 Please use
 node version
+
 ```
 16.0.0
 ```
+
 yarn version
+
 ```
 1.22.19
 ```
 
-Install dependencies 
+Install dependencies
+
 ```bash
 yarn
 ```
 
 create a .env file
+
 ```bash
 touch .env
 ```
 
 Run the project
+
 ```bash
 yarn dev
 ```
 
 # The task
 
-# Time Expectation:
-We don't expect you to spend more than 1.5 hours on this test. Please commit your work regularly so that we can see your thought process, and we look forward to discussing your approach during the review.
-
 # Task 1: Create a Scrabble Score API (Node.js)
+
 Objective:
 Develop a RESTful API within an existing Node.js backend (which is part of a monorepo) to compute the Scrabble score for a given word.
 
@@ -41,8 +45,9 @@ The monorepo already contains a Node.js backend and a React frontend.
 You will add your new API endpoint to the existing backend.
 
 ## Requirements:
+
 How this api should work:
-Create an api that accepts a word and calculates the score. 
+Create an api that accepts a word and calculates the score.
 [What is scrabble?](https://en.wikipedia.org/wiki/Scrabble)
 As an example, the api should accept a word like "cabbage" and this should return a score worth 14 points:
 
@@ -71,6 +76,7 @@ Input: A JSON object containing the word.
 ```
 
 Output: A JSON object containing the computed score.
+
 ```json
 {
   "score": 14
@@ -82,17 +88,17 @@ Implementation Details:
 Backend Technology: Use Node.js (Express, fastify) for implementing the API.
 Letter Values: Use the Scrabble letter values provided:
 
-A, E, I, O, U, L, N, R, S, T = 1 
+A, E, I, O, U, L, N, R, S, T = 1
 
-D, G = 2 
+D, G = 2
 
-B, C, M, P = 3 
+B, C, M, P = 3
 
-F, H, V, W, Y = 4 
+F, H, V, W, Y = 4
 
-K = 5 
+K = 5
 
-J, X = 8 
+J, X = 8
 
 Q, Z = 10
 
@@ -115,16 +121,18 @@ Documentation:
 Update the monorepo's main README or backend-specific README to include instructions on how to use the new API endpoint.
 Provide example API requests and responses.
 
+![Scrabble Score API](./server/tests/Screenshot%202024-08-31%20at%2023.29.38.png)
+
 Commit Regularly:
 As you work through this task, please commit regularly to the repository. These commits will help us understand your approach, thought process, and how you manage your time. Even if you don't fully complete the task, we'll be able to see your progress and how you tackled the problem.
 
 # Task 2: Connect the React Frontend to the Scrabble Score API
+
 Objective:
 Extend the existing React frontend to interact with the newly created Scrabble Score API, allowing users to input words and view their corresponding Scrabble scores.
 
 Monorepo Context:
 The frontend is part of the same monorepo and is already set up with basic functionality.
-
 
 ## Requirements:
 
