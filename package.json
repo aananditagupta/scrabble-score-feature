@@ -15,7 +15,8 @@
     "eject": "react-scripts eject",
     "server": "nodemon server/index.js",
     "dev-server": "node-env-run server --exec nodemon | pino-colada",
-    "dev": "run-p server start dev-server "
+    "dev": "run-p server start dev-server ",
+    "apitest": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
