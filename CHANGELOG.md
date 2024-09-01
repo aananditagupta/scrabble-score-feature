@@ -6,6 +6,7 @@
 
 ##### Documentation Changes
 
+- update changelog and finish task 1 (283f6555)
 - updated screenshots and readme (57c7a388)
 
 ##### New Features
