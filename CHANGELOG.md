@@ -1,5 +1,13 @@
 #### 0.1.0
 
+##### Build System / Dependencies
+
+- added changelog to the project (c9d7da61)
+
+##### Documentation Changes
+
+- updated screenshots and readme (57c7a388)
+
 ##### New Features
 
 - added scrabble score API (898a647b)
