@@ -1,5 +1,4 @@
-const calculateScrabbleScore = require("../utils/scrabbleScore"); // Use require instead of import
-
+import calculateScrabbleScore from "../utils/scrabbleScore";
 describe("calculateScrabbleScore", () => {
   test('calculates score for valid word "cabbage"', () => {
     expect(calculateScrabbleScore("cabbage").score).toBe(14);

@@ -9,7 +9,8 @@ import {
   TableHeader,
   TableCell,
   WordTile,
-} from "./App.styles"; // Import optimized styled components
+} from "./App.styles";
+import { letterScores } from "./data/scrabbleScore";
 
 const App = () => {
   const [word, setWord] = useState(""); // State to store the current input word
@@ -28,6 +29,7 @@ const App = () => {
       return;
     }
 
+    // call the API to calculate the Scrabble score
     try {
       const response = await fetch("http://localhost:3001/api/scrabble-score", {
         method: "POST",
@@ -93,36 +95,6 @@ const App = () => {
       </Table>
     </AppContainer>
   );
-};
-
-// Add letterScores object to use in App.js for data-value attribute
-const letterScores = {
-  A: 1,
-  E: 1,
-  I: 1,
-  O: 1,
-  U: 1,
-  L: 1,
-  N: 1,
-  R: 1,
-  S: 1,
-  T: 1,
-  D: 2,
-  G: 2,
-  B: 3,
-  C: 3,
-  M: 3,
-  P: 3,
-  F: 4,
-  H: 4,
-  V: 4,
-  W: 4,
-  Y: 4,
-  K: 5,
-  J: 8,
-  X: 8,
-  Q: 10,
-  Z: 10,
 };
 
 export default App;
