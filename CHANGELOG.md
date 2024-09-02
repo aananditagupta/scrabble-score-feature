@@ -7,6 +7,7 @@
 
 ##### Documentation Changes
 
+- updated changelog (c088d6a9)
 - update changelog and finish task 1 (283f6555)
 - updated screenshots and readme (57c7a388)
 
@@ -19,6 +20,7 @@
 
 ##### Refactors
 
+- extracted the letters into a data folder so that it can reusable (625a6481)
 - split score calculator into 2 functions (64835e3b)
 
 ##### Code Style Changes
@@ -28,4 +30,5 @@
 
 ##### Tests
 
+- added tests for scrabble input form (92cb9561)
 - added test config and test for api (e14a8737)
