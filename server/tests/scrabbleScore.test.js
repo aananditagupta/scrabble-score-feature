@@ -1,4 +1,5 @@
-import calculateScrabbleScore from "../utils/scrabbleScore";
+const calculateScrabbleScore = require("../utils/scrabbleScore");
+
 describe("calculateScrabbleScore", () => {
   test('calculates score for valid word "cabbage"', () => {
     expect(calculateScrabbleScore("cabbage").score).toBe(14);
