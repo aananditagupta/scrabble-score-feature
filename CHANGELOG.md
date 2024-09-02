@@ -2,6 +2,7 @@
 
 ##### Build System / Dependencies
 
+- added eslint config to the project (68684548)
 - added changelog to the project (c9d7da61)
 
 ##### Documentation Changes
@@ -19,6 +20,11 @@
 ##### Refactors
 
 - split score calculator into 2 functions (64835e3b)
+
+##### Code Style Changes
+
+- modified styling to give it a more realistic look (e7275dc0)
+- added styling to the user input form (d8e9923a)
 
 ##### Tests
 
