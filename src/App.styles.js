@@ -1,60 +1,104 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-// Styled component for the main app container
-export const AppContainer = styled.div`
-  text-align: center;
+const BaseInputButton = css`
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
 `;
 
-// Styled component for the form
+export const AppContainer = styled.div`
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5dc;
+  padding: 20px;
+  min-height: 100vh;
+`;
+
 export const Form = styled.form`
   margin-bottom: 20px;
 `;
 
-// Styled component for text input fields
-export const Input = styled.input.attrs({ type: "text" })`
-  padding: 10px;
+export const Input = styled.input`
+  ${BaseInputButton}
   margin-right: 10px;
-  font-size: 16px;
+  border: 2px solid #333;
 `;
 
-// Styled component for buttons
 export const Button = styled.button`
-  padding: 10px;
-  font-size: 16px;
+  ${BaseInputButton}
   cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    background-color: #555;
+  }
 `;
 
-// Styled component for error messages
 export const ErrorMessage = styled.p`
   color: red;
   margin-top: 10px;
 `;
 
-// Styled component for the table
 export const Table = styled.table`
-  width: 50%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 20px auto;
   border-collapse: collapse;
+  background-color: #f0e68c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-// Styled component for table headers and cells
 export const TableHeader = styled.th`
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  background-color: #d8bfd8;
+  color: #333;
+  padding: 16px;
+  text-align: center;
 `;
 
-// Styled component for table cells
 export const TableCell = styled.td`
   border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  padding: 16px;
+  text-align: center;
+  background-color: ${(props) => (props.isOddRow ? "#fff" : "#fafad2")};
+  position: relative;
+  color: #333;
+  box-shadow: inset 0 -3px 0 #d8bfd8;
+
+  &:after {
+    content: attr(data-value);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #333;
+  }
 `;
 
-// Styled component for table rows with hover effect
-export const TableRow = styled.tr`
-  &:hover {
-    background-color: #f1f1f1;
+export const WordTile = styled.span`
+  align-content: center;
+  display: inline-block;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &::after {
+    content: attr(data-value);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: #333;
   }
 `;

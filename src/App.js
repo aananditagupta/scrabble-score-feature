@@ -8,8 +8,8 @@ import {
   Table,
   TableHeader,
   TableCell,
-  TableRow,
-} from "./App.styles"; // Import the styled components
+  WordTile,
+} from "./App.styles"; // Import optimized styled components
 
 const App = () => {
   const [word, setWord] = useState(""); // State to store the current input word
@@ -41,8 +41,8 @@ const App = () => {
 
       if (response.ok) {
         setWordScores((prevScores) => [
-          ...prevScores,
           { word, score: result.score },
+          ...prevScores,
         ]);
         setWord(""); // Clear the input field after submission
         setError(""); // Clear any previous errors
@@ -61,6 +61,7 @@ const App = () => {
       <h1>Scrabble Score Calculator</h1>
       <Form onSubmit={handleSubmit}>
         <Input
+          type="text"
           value={word}
           onChange={handleInputChange}
           placeholder="Enter a word"
@@ -70,22 +71,58 @@ const App = () => {
       {error && <ErrorMessage>{error}</ErrorMessage>}
       <Table>
         <thead>
-          <TableRow>
+          <tr>
             <TableHeader>Word</TableHeader>
             <TableHeader>Score</TableHeader>
-          </TableRow>
+          </tr>
         </thead>
         <tbody>
           {wordScores.map((entry, index) => (
-            <TableRow key={index}>
-              <TableCell>{entry.word}</TableCell>
-              <TableCell>{entry.score}</TableCell>
-            </TableRow>
+            <tr key={index}>
+              <TableCell isOddRow={index % 2 !== 0}>
+                {[...entry.word.toUpperCase()].map((letter, idx) => (
+                  <WordTile key={idx} data-value={letterScores[letter]}>
+                    {letter}
+                  </WordTile>
+                ))}
+              </TableCell>
+              <TableCell isOddRow={index % 2 !== 0}>{entry.score}</TableCell>
+            </tr>
           ))}
         </tbody>
       </Table>
     </AppContainer>
   );
+};
+
+// Add letterScores object to use in App.js for data-value attribute
+const letterScores = {
+  A: 1,
+  E: 1,
+  I: 1,
+  O: 1,
+  U: 1,
+  L: 1,
+  N: 1,
+  R: 1,
+  S: 1,
+  T: 1,
+  D: 2,
+  G: 2,
+  B: 3,
+  C: 3,
+  M: 3,
+  P: 3,
+  F: 4,
+  H: 4,
+  V: 4,
+  W: 4,
+  Y: 4,
+  K: 5,
+  J: 8,
+  X: 8,
+  Q: 10,
+  Z: 10,
 };
 
 export default App;
