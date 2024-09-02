@@ -119,9 +119,7 @@ Output: A JSON object containing the computed score.
 
 Implementation Details:
 
-Backend Technology: Use Node.js (Express, fastify) for implementing the API.
 Letter Values: Use the Scrabble letter values provided:
-
 A, E, I, O, U, L, N, R, S, T = 1
 
 D, G = 2
@@ -137,23 +135,23 @@ J, X = 8
 Q, Z = 10
 
 Edge Cases:
-[x] Ensure the API handles case insensitivity (e.g., "Cabbage" and "cabbage" should return the same score).
-[x] Return an error message if the input word contains non-alphabetic characters.
-[x] Handle empty or null input by returning an appropriate error message.
+- [x] Ensure the API handles case insensitivity (e.g., "Cabbage" and "cabbage" should return the same score).
+- [x] Return an error message if the input word contains non-alphabetic characters.
+- [x] Handle empty or null input by returning an appropriate error message.
 
 Monorepo Integration:
-[x] Folder Structure: Add your API logic under the existing backend folder structure.
-[x] Routing: Integrate the new /api/scrabble-score route into the current routing setup.
-[x] Configuration: Ensure any necessary configurations, such as environment variables or middleware, are correctly set up to support your API.
-[x] Error Handling: Ensure that your API follows the existing error-handling patterns used in the backend.
+- [x] Folder Structure: Add your API logic under the existing backend folder structure.
+- [x] Routing: Integrate the new /api/scrabble-score route into the current routing setup.
+- [x] Configuration: Ensure any necessary configurations, such as environment variables or middleware, are correctly set up to support your API.
+- [x] Error Handling: Ensure that your API follows the existing error-handling patterns used in the backend.
 
 Testing:
-[x] If time permits, write unit tests for the API endpoint using a testing framework like Jest, or similar.
-[x] Include tests for edge cases, such as input with special characters, numbers, or mixed case.
+- [x] If time permits, write unit tests for the API endpoint using a testing framework like Jest, or similar.
+- [x] Include tests for edge cases, such as input with special characters, numbers, or mixed case.
 
 Documentation:
-[x] Update the monorepo's main README or backend-specific README to include instructions on how to use the new API endpoint.
-[x] Provide example API requests and responses.
+- [x] Update the monorepo's main README or backend-specific README to include instructions on how to use the new API endpoint.
+- [x] Provide example API requests and responses.
 
 Successful Local Test Run
 ![Scrabble Score API](./server/tests/successful_test_run.png)
@@ -169,25 +167,24 @@ Extend the existing React frontend to interact with the newly created Scrabble S
 ## Requirements:
 
 Frontend UI:
-[x] Extend the existing UI to include a form with an input field and a submit button.
-[x] Allow users to type a word into the input field and submit it to the new /api/scrabble-score API endpoint.
+- [x] Extend the existing UI to include a form with an input field and a submit button.
+- [x] Allow users to type a word into the input field and submit it to the new /api/scrabble-score API endpoint.
 
 Functionality:
-
-[x] On submitting the form, send a POST request to the /api/scrabble-score endpoint.
-[x] Capture the API response and display the word and its score in a table below the form.
-[x] Ensure the table updates dynamically to show a history of all submitted words and their corresponding scores.
+- [x] On submitting the form, send a POST request to the /api/scrabble-score endpoint.
+- [x] Capture the API response and display the word and its score in a table below the form.
+- [x] Ensure the table updates dynamically to show a history of all submitted words and their corresponding scores.
 
 Implementation Details:
-[x] React Components: Modify or create new components as needed to handle the form submission and table rendering.
-[x] State Management: Use React's state management to manage the state of the word-score pairs. Ensure the form resets after submission and the new entry is added to the table.
-[x] Error Handling: Implement user-friendly error messages if the API returns an error (e.g., invalid input). Prevent form submission for empty strings or non-alphabetic characters.
+- [x] React Components: Modify or create new components as needed to handle the form submission and table rendering.
+- [x] State Management: Use React's state management to manage the state of the word-score pairs. Ensure the form resets after submission and the new entry is added to the table.
+- [x] Error Handling: Implement user-friendly error messages if the API returns an error (e.g., invalid input). Prevent form submission for empty strings or non-alphabetic characters.
 
 Styling:
 I have tried to modify the styling to give it more of a realistic scrabble keys look. There are other minor style changes (given the time constraints) to make sure that the changes are responsive and that it maintains a consistent look and feel with the rest of the application
 
 Testing:
-[x] If time permits, write unit tests for the new React components, particularly focusing on the form submission and table rendering logic.
+- [x] If time permits, write unit tests for the new React components, particularly focusing on the form submission and table rendering logic.
 
 Monorepo Integration:
 
@@ -195,10 +192,10 @@ Ensure that the new frontend functionality follows the existing project structur
 Update the monorepo's build and deployment scripts (if necessary) to account for the new functionality.
 
 Commit Regularly:
-[x] Please continue to commit regularly while working on the frontend portion. We want to see how you integrate with the existing codebase, manage your time, and resolve any challenges you encounter.
+- [x] Please continue to commit regularly while working on the frontend portion. We want to see how you integrate with the existing codebase, manage your time, and resolve any challenges you encounter.
 
 Deliverables:
-[x] Commit your changes to the existing monorepo in a branch named scrabble-score-feature
-[x] Ensure that all code follows the project's linting and formatting guidelines.
-[x] Update the monorepo README with details about the new feature, including how to run and test it locally.
-[x] This test assesses your ability to work within an existing codebase, integrate new features into a Node.js backend, and connect those features to a React frontend. The focus is on how you approach the problem within the given time frame, so commit regularly, and don't worry if you can't complete every detail. We look forward to discussing your work in the follow-up review.
+- [x] Commit your changes to the existing monorepo in a branch named scrabble-score-feature
+- [x] Ensure that all code follows the project's linting and formatting guidelines.
+- [x] Update the monorepo README with details about the new feature, including how to run and test it locally.
+- [x] This test assesses your ability to work within an existing codebase, integrate new features into a Node.js backend, and connect those features to a React frontend. The focus is on how you approach the problem within the given time frame, so commit regularly, and don't worry if you can't complete every detail. We look forward to discussing your work in the follow-up review.
