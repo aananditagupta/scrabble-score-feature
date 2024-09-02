@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import "./App.css";
+import {
+  AppContainer,
+  Form,
+  Input,
+  Button,
+  ErrorMessage,
+  Table,
+  TableHeader,
+  TableCell,
+  TableRow,
+} from "./App.styles"; // Import the styled components
 
 const App = () => {
   const [word, setWord] = useState(""); // State to store the current input word
@@ -47,35 +57,34 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <AppContainer>
       <h1>Scrabble Score Calculator</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
+      <Form onSubmit={handleSubmit}>
+        <Input
           value={word}
           onChange={handleInputChange}
           placeholder="Enter a word"
         />
-        <button type="submit">Submit</button>
-      </form>
-      {error && <p className="error">{error}</p>}
-      <table>
+        <Button type="submit">Submit</Button>
+      </Form>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+      <Table>
         <thead>
-          <tr>
-            <th>Word</th>
-            <th>Score</th>
-          </tr>
+          <TableRow>
+            <TableHeader>Word</TableHeader>
+            <TableHeader>Score</TableHeader>
+          </TableRow>
         </thead>
         <tbody>
           {wordScores.map((entry, index) => (
-            <tr key={index}>
-              <td>{entry.word}</td>
-              <td>{entry.score}</td>
-            </tr>
+            <TableRow key={index}>
+              <TableCell>{entry.word}</TableCell>
+              <TableCell>{entry.score}</TableCell>
+            </TableRow>
           ))}
         </tbody>
-      </table>
-    </div>
+      </Table>
+    </AppContainer>
   );
 };
 

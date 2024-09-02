@@ -11,6 +11,7 @@
 
 ##### New Features
 
+- added to show previous words with scores (e4e947a3)
 - connect API call in the FE (0cff8a9a)
 - added basic form for user input (f9620a95)
 - added scrabble score API (898a647b)
